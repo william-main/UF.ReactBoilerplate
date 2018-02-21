@@ -1,0 +1,33 @@
+{
+  "name": "uf-calculator",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^8.0.0",
+    "chokidar-cli": "^1.2.0",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-nouislider": "^2.0.1",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true src/styles/scss/ -o src/styles/css",
+    "build-task:autoprefixer": "postcss src/styles/css/*.css --use autoprefixer -d src/styles/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar \"src/styles/scss/**/*.scss\" -c \"npm run sass:build\"",
+    "dev": "npm-run-all -p sass:* start"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "node-sass-chokidar": "0.0.3",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.11.0"
+  }
+}

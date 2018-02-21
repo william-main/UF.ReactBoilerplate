@@ -1,0 +1,10 @@
+@import '_Mixins';
+
+@include font-face(Superior, fonts/Superior/SuperiorTitle-Bold, 500, normal, eot svg woff);
+@include font-face(Simplon-Medium-Mono, fonts/Simplon/SimplonMono-Medium, 500, normal, otf eot woff woff2 ttf svg);
+@include font-face(Simplon-Medium-Norm, fonts/Simplon/SimplonNorm-Medium, 500, normal, eot woff woff2 ttf svg);
+@include font-face(Simplon-Light, fonts/Simplon/SimplonNorm-Light-WebS, 500, normal, eot woff woff2 ttf svg);
+
+$font-body: "Simplon-Light";
+$font-title-small: "Simplon-Medium-Norm";
+$font-title: "Superior";
