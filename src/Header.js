@@ -26,13 +26,7 @@ export default class Header extends Component {
                                         </div>
                                     </Col>
                                     <Col md={3}>
-                                        <div className="cta-area">
-                                            <a className="cta">Instant Quote</a>
-                                            <a className="phone-number">
-                                                <span className="phone">0808 163 5111</span>
-                                                <img className="phone-icon" src="https://www.ultimatefinance.co.uk/assets/img/phone_blue.svg"/>
-                                            </a>
-                                        </div>
+                                        <TelephoneNumber ctaTitle={"Instant Quote"} phone={"0808 163 5111"} url={"https://www.ultimatefinance.co.uk/assets/img/phone_blue.svg"}/>
                                     </Col>
                                 </Row>
                             </Grid>
@@ -58,6 +52,20 @@ class Navigation extends Component {
     render() {
         return (
             <li><a href={this.props.hyperlink}>{this.props.title}</a></li>
+        );
+    }
+}
+
+class TelephoneNumber extends Component {
+    render() {
+        return (
+            <div className="cta-area">
+                <a className="cta">{this.props.ctaTitle}</a>
+                <a className="phone-number">
+                    <span className="phone">{this.props.phone}</span>
+                    <img className="phone-icon" src={this.props.url}/>
+                </a>
+            </div>
         );
     }
 }

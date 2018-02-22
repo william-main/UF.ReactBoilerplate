@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './nouislider.min.css';
-import Header from './Header.js';
+import Header from './Header';
+import Footer from './Footer';
 import Nouislider from 'react-nouislider';
 import { Bootstrap, Grid, Row, Col, Forms } from 'react-bootstrap';
 
@@ -10,6 +11,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header />
+                <Footer />
             </div>
         );
     }
