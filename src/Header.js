@@ -9,7 +9,7 @@ export default class Header extends Component {
                 <Grid fluid>
                     <Row>
                         <div className="header">
-                            <Grid>
+                            <Grid className="uf-container">
                                 <Row>
                                     <Col xs={12} md={3}>
                                         <div className="logo">
@@ -26,8 +26,12 @@ export default class Header extends Component {
                                         </div>
                                     </Col>
                                     <Col md={3}>
-                                        <div>
+                                        <div className="cta-area">
                                             <a className="cta">Instant Quote</a>
+                                            <a className="phone-number">
+                                                <span className="phone">0808 163 5111</span>
+                                                <img className="phone-icon" src="https://www.ultimatefinance.co.uk/assets/img/phone_blue.svg"/>
+                                            </a>
                                         </div>
                                     </Col>
                                 </Row>
